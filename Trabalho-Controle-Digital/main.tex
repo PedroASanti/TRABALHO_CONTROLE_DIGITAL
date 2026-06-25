@@ -1,0 +1,77 @@
+\documentclass[
+    12pt,
+    a4paper,
+    brazil,
+    oneside
+]{abntex2}
+
+% -------------------------------------------------------
+% Pacotes essenciais
+% -------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{babel}
+\usepackage[alf]{abntex2cite}
+
+% -------------------------------------------------------
+% Informações do trabalho
+% -------------------------------------------------------
+\input{editaveis/informacoes}
+
+% -------------------------------------------------------
+% Configurações de aparência
+% -------------------------------------------------------
+\hypersetup{
+    pdftitle={\imprimirtitulo},
+    pdfauthor={\imprimirautor},
+    pdfcreator={LaTeX com abnTeX2},
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+
+% -------------------------------------------------------
+% Início do documento
+% -------------------------------------------------------
+\begin{document}
+\frenchspacing
+
+% --- Capa ---
+\imprimircapa
+
+% --- Resumo ---
+\input{editaveis/resumo}
+\cleardoublepage
+
+% --- Sumário ---
+\tableofcontents
+\cleardoublepage
+
+% -------------------------------------------------------
+% Conteúdo
+% -------------------------------------------------------
+\textual
+
+\input{editaveis/cap1-introducao}
+\input{editaveis/cap2-conceitos}
+\input{editaveis/cap3-plano-z}
+\input{editaveis/cap4-criterios}
+\input{editaveis/cap5-amostragem}
+\input{editaveis/cap6-exemplo}
+\input{editaveis/cap7-conclusao}
+
+% -------------------------------------------------------
+% Referências
+% -------------------------------------------------------
+\postextual
+\bibliography{referencias}
+
+\end{document}
